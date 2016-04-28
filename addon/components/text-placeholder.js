@@ -2,13 +2,11 @@ import Ember from 'ember';
 import layout from '../templates/components/text-placeholder';
 
 export default Ember.Component.extend({
-  layout,
-  tagName: 'span',
-
   characters: [
     '&#9644;', // Black Rectangle, '▬', (http://unicode-table.com/en/25AC/)
     '&#8203;', // Zero Width Space, '​' <- There's a character in there! (http://unicode-table.com/en/200B/)
   ],
+  layout,
   _localSize: 140,
   min: 0,
   size: Ember.computed('_localSize', {
@@ -34,12 +32,11 @@ export default Ember.Component.extend({
       return _localSize;
     }
   }),// {integer}|{string:'short|medium|long'}
-  varLength: false,
-
+  tagName: 'span',
   textContent: Ember.computed('text', function() {
     return this._generatePlaceholderString();
   }),
-
+  varLength: false,
   _generatePlaceholderString()
   {
     let output = '';
@@ -52,7 +49,6 @@ export default Ember.Component.extend({
     }
     return output;
   },
-
   _generateRandomInt(max)
   {
     let min = this.get('min');
