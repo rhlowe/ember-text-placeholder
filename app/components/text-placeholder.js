@@ -1,0 +1,1 @@
+export { default } from 'ember-text-placeholder/components/text-placeholder';
