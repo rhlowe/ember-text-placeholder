@@ -32,7 +32,7 @@ export default Ember.Component.extend({
       }
       this.set('_localSize', _localSize);
       return _localSize;
-    },
+    }
   }),// {integer}|{string:'short|medium|long'}
   varLength: false,
 
