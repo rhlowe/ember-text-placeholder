@@ -6,10 +6,11 @@ export default Ember.Component.extend({
   tagName: 'span',
 
   characters: [
-    '&#9644;', // Black Rectangle, '▬'
-    '&#8203;', // Zero Width Space, '​' <- There's a character in there!
+    '&#9644;', // Black Rectangle, '▬', (http://unicode-table.com/en/25AC/)
+    '&#8203;', // Zero Width Space, '​' <- There's a character in there! (http://unicode-table.com/en/200B/)
   ],
   _localSize: 140,
+  min: 0,
   size: Ember.computed('_localSize', {
     get(key) {
       return this.get('_localSize');
@@ -18,13 +19,15 @@ export default Ember.Component.extend({
       let _localSize = value;
       switch (value) {
         case 'short':
-          _localSize = 10;
+          _localSize = 16;
           break;
         case 'medium':
-          _localSize = 75;
+          _localSize = 64;
+          this.set('min', 16);
           break;
         case 'long':
-          _localSize = 250;
+          _localSize = 256;
+          this.set('min', 64);
           break;
       }
       this.set('_localSize', _localSize);
@@ -50,8 +53,9 @@ export default Ember.Component.extend({
     return output;
   },
 
-  _generateRandomInt(max, min = 0)
+  _generateRandomInt(max)
   {
+    let min = this.get('min');
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 });
