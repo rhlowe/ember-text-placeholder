@@ -10,7 +10,10 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "rhlowe/ember-text-placeholder"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
