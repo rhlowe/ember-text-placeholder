@@ -1,8 +1,16 @@
-# Ember-text-placeholder
+# ember-text-placeholder
 
-This README outlines the details of collaborating on this Ember addon.
+The goal of `ember-text-placeholder` is to provide a mechanism for placing placeholder text while an app loads. The effect is inspired by Facebook.
+
+[Inspiration](http://i.imgur.com/ohxK0Gu.png?)
 
 ## Installation
+
+To use as an addon
+
+* `ember addon ember-text-placeholder`
+
+To dev or run tests
 
 * `git clone` this repository
 * `npm install`

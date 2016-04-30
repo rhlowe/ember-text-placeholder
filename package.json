@@ -1,9 +1,8 @@
 {
   "name": "ember-text-placeholder",
   "version": "0.1.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "ember-text-placeholder provides a UI solution for using up space while Ember is loading data.",
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
   "scripts": {
@@ -15,7 +14,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Rob Lowe",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
@@ -40,7 +39,9 @@
     "loader.js": "^4.0.0"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "components",
+    "ui-elements"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.5",
