@@ -3,13 +3,19 @@ import layout from '../templates/components/text-placeholder';
 import RandomNumberMixin from 'ember-text-placeholder/mixins/random-number';
 
 export default Ember.Component.extend(RandomNumberMixin, {
-  characters: [
-    '&#9644;', // Black Rectangle, '▬', (http://unicode-table.com/en/25AC/)
-    '&#8203;', // Zero Width Space, '​' <- There's a character in there! (http://unicode-table.com/en/200B/)
-  ],
   layout,
+  tagName: 'span',
+
   _localSize: 140,
+
+  characters: [
+    '▬', // Black Rectangle, '&#9644;', '▬', (http://unicode-table.com/en/25AC/)
+    '​', // Zero Width Space, '&#8203;', '​' <- There's a character in there! (http://unicode-table.com/en/200B/)
+  ],
   min: 0,
+  varLength: false,
+
+  // {integer}|{string:'short|medium|long'}
   size: Ember.computed('_localSize', {
     get(key) {
       return this.get('_localSize');
@@ -32,22 +38,30 @@ export default Ember.Component.extend(RandomNumberMixin, {
       this.set('_localSize', _localSize);
       return _localSize;
     }
-  }),// {integer}|{string:'short|medium|long'}
-  tagName: 'span',
-  textContent: Ember.computed('text', function() {
+  }),
+  textContent: Ember.computed(function() {
     return this._generatePlaceholderString();
   }),
-  varLength: false,
+
   _generatePlaceholderString()
   {
-    let output = '';
     let size = this.get('size');
     let min = this.get('min');
 
     if (this.get('varLength')) size = this.randomNumber(size, min);
 
-    for(let i = 0; i < size; i++) {
-      output += this.get('characters').join('');
+    return this._recursivelyJoinCharacters();
+  },
+
+  _recursivelyJoinCharacters()
+  {
+    const characters = this.get('characters');
+    const denominator = characters.length * characters[0].length;
+    const size = this.get('size');
+    let output = '';
+
+    while(output.length / denominator < size) {
+      output += characters.join('');
     }
     return output;
   },

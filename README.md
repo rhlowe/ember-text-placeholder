@@ -4,6 +4,8 @@ The goal of `ember-text-placeholder` is to provide a mechanism for placing place
 
 ![Inspiration](http://i.imgur.com/ohxK0Gu.png?)
 
+Ember Observer Score: [![Ember Observer Score](https://emberobserver.com/badges/ember-text-placeholder.svg)](https://emberobserver.com/addons/ember-text-placeholder)
+
 ## Installation
 
 To use as an addon

@@ -4,13 +4,6 @@ import { module, test } from 'qunit';
 
 module('Unit | Mixin | random number');
 
-// Replace this with your real tests.
-test('it works', function(assert) {
-  let RandomNumberObject = Ember.Object.extend(RandomNumberMixin);
-  let subject = RandomNumberObject.create();
-  assert.ok(subject);
-});
-
 test('returns a random number between 0 and 10', function(assert) {
   let RandomNumberObject = Ember.Object.extend(RandomNumberMixin);
   let subject = RandomNumberObject.create();
