@@ -2,7 +2,7 @@
 
 The goal of `ember-text-placeholder` is to provide a mechanism for placing placeholder text while an app loads. The effect is inspired by Facebook.
 
-[Inspiration](http://i.imgur.com/ohxK0Gu.png?)
+![Inspiration](http://i.imgur.com/ohxK0Gu.png?)
 
 ## Installation
 
