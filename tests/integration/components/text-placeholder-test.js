@@ -5,7 +5,7 @@ moduleForComponent('text-placeholder', 'Integration | Component | text placehold
   integration: true
 });
 
-test('it renders at various sizes', function(assert) {
+test('it renders at various fixed sizes', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
