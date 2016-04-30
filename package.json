@@ -1,6 +1,6 @@
 {
   "name": "ember-text-placeholder",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "ember-text-placeholder provides a UI solution for using up space while Ember is loading data.",
   "directories": {
     "test": "tests"
