@@ -1,10 +1,10 @@
+[![Ember Observer Score](https://emberobserver.com/badges/ember-text-placeholder.svg)](https://emberobserver.com/addons/ember-text-placeholder)
+
 # ember-text-placeholder
 
 The goal of `ember-text-placeholder` is to provide a mechanism for placing placeholder text while an app loads. The effect is inspired by Facebook.
 
-![Inspiration](http://i.imgur.com/ohxK0Gu.png?)
-
-Ember Observer Score: [![Ember Observer Score](https://emberobserver.com/badges/ember-text-placeholder.svg)](https://emberobserver.com/addons/ember-text-placeholder)
+![Inspiration](http://i.imgur.com/ohxK0Gu.png)
 
 ## Installation
 
