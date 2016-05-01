@@ -5,17 +5,18 @@
 <p>default usage: <code>\{{text-placeholder}}</code></p>
 <p>{{text-placeholder}}</p>
 
-<p>size parameter <code>\{{text-placeholder size='long'}}</code></p>
+<p>size parameter as string: <code>\{{text-placeholder size='long'}}</code></p>
 <p>{{text-placeholder size='long'}}</p>
 
-<p><code>\{{text-placeholder size=25}}</code></p>
+<p>size parameter as number: <code>\{{text-placeholder size=25}}</code></p>
 <p>{{text-placeholder size=25}}</p>
 
-<p><code>\{{text-placeholder size='long' varLength=true}}</code></p>
+<p>varLength parameter: <code>\{{text-placeholder size='long' varLength=true}}</code></p>
 <p>{{text-placeholder size='long' varLength=true}}</p>
 
-<p><code>\{{text-placeholder size=25 varLength=true}}</code></p>
-<p>{{text-placeholder size=25 varLength=true}}</p>
+<p>characters array override: <code>\{{text-placeholder varLength=true characters='["🙌", " "]'}}</code></p>
+<p>{{text-placeholder varLength=true characters='["🙌", " "]'}}</p>
+<p>Note: character override must be sent as a string</p>
 
 <h2>recommended styles</h2>
 <code>
@@ -32,4 +33,5 @@
   100% { background-position:0% 50%; }
 }
 </code>
+
 {{outlet}}

@@ -53,12 +53,12 @@ export default Ember.Component.extend(RandomNumberMixin, {
       this.set('size', this.randomNumber(size, min));
     }
 
-    return this._recursivelyJoinCharacters();
+    return this._recursivelyJoincharacters();
   },
 
-  _recursivelyJoinCharacters()
+  _recursivelyJoincharacters()
   {
-    const characters = this.get('characters');
+    const characters = (typeof(this.get('characters')) === 'string') ? JSON.parse(this.get('characters')) : this.get('characters');
     const denominator = characters.length * characters[0].length;
     const size = this.get('size');
     let output = '';
