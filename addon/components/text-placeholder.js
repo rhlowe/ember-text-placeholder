@@ -48,7 +48,9 @@ export default Ember.Component.extend(RandomNumberMixin, {
     let size = this.get('size');
     let min = this.get('min');
 
-    if (this.get('varLength')) size = this.randomNumber(size, min);
+    if (this.get('varLength')) {
+      this.set('size', this.randomNumber(size, min));
+    }
 
     return this._recursivelyJoinCharacters();
   },
