@@ -10,7 +10,7 @@ The goal of `ember-text-placeholder` is to provide a mechanism for placing place
 
 To use as an addon
 
-* `ember addon ember-text-placeholder`
+* `ember install ember-text-placeholder`
 
 To dev or run tests
 
