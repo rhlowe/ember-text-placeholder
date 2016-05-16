@@ -6,6 +6,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('text-placeholder');
+  this.route('rect-placeholder');
 });
 
 export default Router;

@@ -1,37 +1,8 @@
 <h1>ember-text-placeholder</h1>
 
-<h2>usage examples</h2>
-
-<p>default usage: <code>\{{text-placeholder}}</code></p>
-<p>{{text-placeholder}}</p>
-
-<p>size parameter as string: <code>\{{text-placeholder size='long'}}</code></p>
-<p>{{text-placeholder size='long'}}</p>
-
-<p>size parameter as number: <code>\{{text-placeholder size=25}}</code></p>
-<p>{{text-placeholder size=25}}</p>
-
-<p>varLength parameter: <code>\{{text-placeholder size='long' varLength=true}}</code></p>
-<p>{{text-placeholder size='long' varLength=true}}</p>
-
-<p>characters array override: <code>\{{text-placeholder varLength=true characters='["🙌", " "]'}}</code></p>
-<p>{{text-placeholder varLength=true characters='["🙌", " "]'}}</p>
-<p>Note: character override must be sent as a string</p>
-
-<h2>recommended styles</h2>
-<code>
-.TextPlaceholder {
-  animation: ScrollingBackground 3s linear infinite;
-  background: linear-gradient(270deg, #333 0%, #999 20%, #333 40%, #999 60%, #333 80%, #999 100%);
-  -webkit-background-clip: text;
-  background-size: 500% 100%;
-  font-family: monospace;
-  -webkit-text-fill-color: transparent;
-}
-@keyframes ScrollingBackground {
-  0% { background-position:100% 50%; }
-  100% { background-position:0% 50%; }
-}
-</code>
+<ul>
+  <li>{{link-to "{{text-placeholder}}" "text-placeholder"}}</li>
+  <li>{{link-to "{{rect-placeholder}}" "rect-placeholder"}}</li>
+</ul>
 
 {{outlet}}
