@@ -3,8 +3,9 @@ import layout from '../templates/components/text-placeholder';
 import RandomNumberMixin from 'ember-text-placeholder/mixins/random-number';
 
 export default Ember.Component.extend(RandomNumberMixin, {
-  classNames: ['TextPlaceholder'],
   layout,
+
+  classNames: ['TextPlaceholder'],
   tagName: 'span',
 
   _localSize: 140,

@@ -4,7 +4,8 @@ import layout from '../templates/components/rect-placeholder';
 export default Ember.Component.extend({
   layout,
 
-  tagName: '',
+  classNames: ['RectPlaceholder'],
+  tagName: 'div',
 
   height: 64,
   radiusX: 0,
