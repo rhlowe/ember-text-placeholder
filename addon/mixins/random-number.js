@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
 
-export default Ember.Mixin.create({
+export default Mixin.create({
     randomNumber(max, min) {
       return Math.floor(Math.random() * (max - min + 1) + min);
     }
