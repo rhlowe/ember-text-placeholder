@@ -1,8 +1,9 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { computed } from '@ember/object';
 import layout from '../templates/components/text-placeholder';
 import RandomNumberMixin from 'ember-text-placeholder/mixins/random-number';
 
-export default Ember.Component.extend(RandomNumberMixin, {
+export default Component.extend(RandomNumberMixin, {
   layout,
 
   classNames: ['TextPlaceholder'],
@@ -18,8 +19,8 @@ export default Ember.Component.extend(RandomNumberMixin, {
   varLength: false,
 
   // {integer}|{string:'short|medium|long'}
-  size: Ember.computed('_localSize', {
-    get(key) {
+  size: computed('_localSize', {
+    get() {
       return this.get('_localSize');
     },
     set(key, value) {
@@ -41,7 +42,7 @@ export default Ember.Component.extend(RandomNumberMixin, {
       return _localSize;
     }
   }),
-  textContent: Ember.computed(function() {
+  textContent: computed(function() {
     return this._generatePlaceholderString();
   }),
 
