@@ -8,7 +8,8 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:each"
+    "test": "ember test",
+    "test:each": "ember try:each"
   },
   "repository": {
     "type": "git",
