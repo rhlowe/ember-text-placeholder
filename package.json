@@ -15,15 +15,15 @@
     "url": "rhlowe/ember-text-placeholder"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": "8.* || >= 10.*"
   },
   "author": "Rob Lowe",
   "license": "MIT",
   "devDependencies": {
-    "ember-cli": "^3.6.0",
+    "ember-cli": "~3.12.0",
     "ember-cli-htmlbars-inline-precompile": "^2.1.0",
     "ember-load-initializers": "^2.0.0",
-    "ember-qunit": "^4.2.0",
+    "ember-qunit": "^4.4.1",
     "ember-resolver": "^5.0.1",
     "ember-source": "https://s3.amazonaws.com/builds.emberjs.com/release/shas/9ff016d21488fd7fa4d625db78c2bafe01772f11.tgz",
     "ember-source-channel-url": "^1.1.0",
@@ -37,7 +37,7 @@
     "ui-elements"
   ],
   "dependencies": {
-    "ember-cli-babel": "^6.6.0",
+    "ember-cli-babel": "^7.7.3",
     "ember-cli-htmlbars": "^3.0.1"
   },
   "ember-addon": {
