@@ -1,16 +1,25 @@
-/bower_components
-/config/ember-try.js
-/dist
-/tests
-/tmp
+# compiled output
+/dist/
+/tmp/
+
+# misc
 **/.gitkeep
-.bowerrc
 .editorconfig
 .ember-cli
 .gitignore
 .jshintrc
-.watchmanconfig
 .travis.yml
-bower.json
+.watchmanconfig
+/.editorconfig
+/.ember-cli
+/.env*
+/.eslintignore
+/.eslintrc.js
+/.gitignore
+/.template-lintrc.js
+/.travis.yml
+/.watchmanconfig
+/config/ember-try.js
+/tests
 ember-cli-build.js
 testem.js
