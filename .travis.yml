@@ -5,8 +5,8 @@ node_js:
   # so that your addon works for all apps
   - "8"
 
-sudo: false
 dist: trusty
+os: linux
 
 addons:
   chrome: stable
@@ -28,7 +28,6 @@ branches:
     - /^v\d+\.\d+\.\d+/
 
 jobs:
-  fail_fast: true
   allow_failures:
     - env: EMBER_TRY_SCENARIO=ember-canary
 
@@ -38,8 +37,8 @@ jobs:
     - stage: "Tests"
       name: "Tests"
       script:
-        - npm run lint:hbs
-        - npm run lint:js
+        # - npm run lint:hbs
+        # - npm run lint:js
         - npm test
 
     # we recommend new addons test the current and previous LTS
